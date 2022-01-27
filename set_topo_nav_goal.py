@@ -16,7 +16,7 @@ if __name__ == '__main__':
     client = actionlib.SimpleActionClient('/thorvald_001/topological_navigation', GotoNodeAction)
     client.wait_for_server()
     
-
+# The waypoints are created using the week 8 workshops
 
     goal = GotoNodeGoal()
     goal.target = "WayPoint5"
@@ -41,6 +41,8 @@ if __name__ == '__main__':
     rospy.loginfo("result is %s", result)
     sleep(5)
 
+    # In this the robot moves from waypoint 0 to waypoint 2
+
     # send 2nd goal
     goal.target = "WayPoint2"
     # Fill in the goal here
@@ -51,7 +53,8 @@ if __name__ == '__main__':
     rospy.loginfo("result is %s", result)
     sleep(5)
 
-    
+    # In this the robot moves from waypoint 2 to waypoint 3
+
     # send 3rd goal
     goal.target = "WayPoint3"
     # Fill in the goal here
@@ -62,6 +65,7 @@ if __name__ == '__main__':
     rospy.loginfo("result is %s", result)
     sleep(5)
 
+    # In this the robot moves from waypoint 3 to waypoint 4
 
     # send 4th goal
     goal.target = "WayPoint4"
